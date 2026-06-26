@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Product Risk Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🛒 Smart Product Risk Analyzer</h1>
+    <p class="subtext">Compare products and detect fake listings instantly</p>
+
+    <form action="/compare" method="POST" class="form-box">
+
+        <input type="text" name="product_name" placeholder="Product Name" required>
+        <input type="number" name="price" placeholder="Price" required>
+        <input type="number" step="0.1" name="rating" placeholder="Rating" required>
+        <input type="number" name="reviews" placeholder="Reviews" required>
+        <input type="text" name="seller_name" placeholder="Seller Name">
+
+        <button type="submit">Analyze Product</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
